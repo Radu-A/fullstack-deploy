@@ -3,7 +3,7 @@ import "./App.css";
 import ProviderCard from "./components/ProviderCard";
 
 function App() {
-  const [providersList, setProvidersList] = useState;
+  const [providersList, setProvidersList] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -20,8 +20,15 @@ function App() {
 
   return (
     <>
-      <h1>Providers</h1>
-      {providersList && <p>Hello</p>}
+      <section className="provider-title-section">
+        <h1>Providers</h1>
+      </section>
+      <section className="provider-list-section">
+        {providersList &&
+          providersList.map((provider, i) => {
+            return <ProviderCard key={i} provider={provider} />;
+          })}
+      </section>
     </>
   );
 }

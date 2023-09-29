@@ -1,11 +1,10 @@
-import React from 'react'
+export default function ProviderCard({ provider }) {
 
-export default function ProviderCard() {
   return (
-    <article className='provider-card-artile'>
-        <h2></h2>
-        <p></p>
-        <p></p>
+    <article className="provider-card-artile">
+      <h2>{provider.company_name}</h2>
+      <p>{provider.CIF}</p>
+      <p>{provider.address}</p>
     </article>
-  )
+  );
 }

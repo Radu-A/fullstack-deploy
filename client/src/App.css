@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.provider-list-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.provider-card-artile {
+  border: 2px solid #242424;
+  border-radius: 5px;
+  width: 150px;
+}
